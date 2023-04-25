@@ -1,0 +1,95 @@
+.navegation___link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  top: 80px;
+  right: 0;
+  transition: height 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+  overflow-y: hidden;
+  z-index: 1000;
+  background-color: #d9d9d9;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+.header {
+  display: flex;
+}
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.icon {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+.hamburguer {
+  width: 20px;
+  border-top: 2px solid;
+}
+.hamburguer:after,
+.hamburguer::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin-top: 5px;
+  background: currentColor;
+  transition: 0.3s;
+  position: relative;
+}
+
+.icon.iconActive .hamburguer {
+  border-top: transparent;
+}
+
+.icon.iconActive .hamburguer::after {
+  border-top-color: transparent;
+  transform: rotate(-135deg);
+  top: -7px;
+}
+
+.icon.iconActive .hamburguer::before {
+  transform: rotate(135deg);
+}
+.menu.menuClose .navegation___link {
+  transition: 0.6s;
+  visibility: hidden;
+}
+.menu.menuOpen .navegation___link {
+  height: calc(100vh - 80px);
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .menuClose {
+    display: none;
+  }
+  .menu.menuOpen .navegation___link {
+    height: 30px;
+    transition: 0s;
+  }
+
+  .navegation___link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: auto;
+  }
+
+  .icon {
+    display: none;
+  }
+}
