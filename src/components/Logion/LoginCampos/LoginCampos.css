@@ -1,0 +1,12 @@
+.form__container {
+  width: 288px;
+  margin: 5rem auto 0 auto;
+  padding-top: 50px;
+}
+
+.remember {
+  margin-bottom: 0.875rem;
+}
+.remember__link {
+  margin: 0.875rem;
+}

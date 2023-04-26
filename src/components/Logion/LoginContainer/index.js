@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import LoginCampos from "../LoginCampos";
 
 const LoginContainer = () => {
-  const [addColor, setAddColor] = useState("");
+  const [addColor, setAddColor] = useState("#D9D9D9");
   const inputRef = useRef(null);
   const divRef = useRef(null);
 

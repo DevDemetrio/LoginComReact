@@ -1,0 +1,11 @@
+.style__butto {
+  width: 18.25rem;
+  height: 2.5625rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.style__butto:hover {
+  font-size: 1.1rem;
+}

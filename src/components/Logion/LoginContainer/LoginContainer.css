@@ -1,6 +1,5 @@
 .container__login {
-  width: 400px;
-  height: 400px;
-
-  border: 1px solid black;
+  width: 21.6875rem;
+  height: 26.5625rem;
+  margin: 5rem auto;
 }
