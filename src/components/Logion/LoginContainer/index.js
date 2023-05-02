@@ -1,29 +1,17 @@
 import "./LoginContainer.css";
-import { useState, useRef } from "react";
 import LoginCampos from "../LoginCampos";
+import ButtoChangeColor from "../../ButtoChangeColor";
 
-const LoginContainer = () => {
-  const [addColor, setAddColor] = useState("#D9D9D9");
-  const inputRef = useRef(null);
-  const divRef = useRef(null);
-
-  const changeColorDiv = () => {
-    let valorColor = inputRef.current.value;
-    setAddColor(valorColor);
-    divRef.current.style.backgroundColor = valorColor;
-    console.log(valorColor);
-  };
+const LoginContainer = (props) => {
   return (
     <div>
       <div
-        ref={divRef}
-        style={{ backgroundColor: addColor }}
+        style={{ backgroundColor: props.color }}
         className="container__login"
       >
         <LoginCampos />
+        <ButtoChangeColor color={props.color} setColor={props.setColor} />
       </div>
-      <label>Personalise o background do login</label>
-      <input type="color" ref={inputRef} onChange={changeColorDiv}></input>
     </div>
   );
 };
