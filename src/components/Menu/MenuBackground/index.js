@@ -1,5 +1,4 @@
 import MenuLinks from "../MenuLinks";
-import { useState } from "react";
 import "./MenuBackground.css";
 
 const MenuBackground = () => {

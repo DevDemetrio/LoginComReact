@@ -11,6 +11,7 @@ const LoginContainer = (props) => {
       >
         <LoginCampos />
         <ButtoChangeColor color={props.color} setColor={props.setColor} />
+        <ButtoChangeColor color={props.color} setColor={props.setColor} />
       </div>
     </div>
   );

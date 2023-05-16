@@ -1,0 +1,11 @@
+.button__changeColor {
+  margin-top: 70px;
+}
+
+.button__changeColor label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.button__changeColor input {
+  border-radius: 5px;
+}

@@ -1,14 +1,17 @@
+import "./ButtoChangeColor.css";
 import { useState } from "react";
 
 const ButtoChangeColor = (props) => {
-  const [color, setColor] = useState(props.color); // <--- inicializa com a prop recebida
+  const [color, setColor] = useState(props.color);
+
   const monitora = (evento) => {
     setColor(evento.target.value);
-    props.setColor(evento.target.value); // <--- atualiza a cor no pai
+    props.setColor(evento.target.value);
   };
   return (
-    <div>
+    <div className="button__changeColor">
       <input type="color" value={color} onChange={monitora} />
+      <label>Mude cor de fundo</label>
     </div>
   );
 };
